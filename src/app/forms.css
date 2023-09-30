@@ -1,0 +1,42 @@
+.error {
+  @apply text-rose-600 font-serif text-xs capitalize;
+}
+
+.form label {
+  @apply inline-block  mt-2  mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize;
+}
+.form input,
+.form textarea,
+.form select {
+  @apply border-2 bg-white/80 outline-none border-blue-500 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 my-1.5;
+  @apply rounded-md text-sm placeholder:capitalize !important;
+}
+
+.darkform input,
+.darkform textarea,
+.darkform select {
+  @apply bg-slate-900 text-white  border-white !important;
+}
+
+.darkform input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #1e2931 inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #fff;
+}
+.darkform input:-webkit-autofill:focus {
+  -webkit-box-shadow: #1e2931, 0 0 0 50px white inset;
+  -webkit-text-fill-color: #fff;
+}
+
+.darkform label {
+  @apply text-white !important;
+}
+
+.darkform input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+}
+.displayImage{
+  @apply bg-white/50 border-blue-500;
+}
+.darkform .displayImage{
+  @apply bg-slate-800 border-slate-500 ;
+}
