@@ -33,7 +33,7 @@ export function SmoothScroll(target: any, speed: number, smooth: number) {
 		? document.documentElement
 		: target // safari is the new IE
 
-	target.addEventListener('wheel', scrolled, { passive: false })
+	// target.addEventListener('wheel', scrolled, { passive: false })
 
 	function scrolled(e: WheelEvent) {
 		if (canScroll) {

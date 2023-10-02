@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
             <h1 className="text-3xl font-bold mb-6">Choose Your Role</h1>
             <div className="flex space-x-4">
                 {/* University Option */}
-                <Link href="/organization" className="text-blue-500 hover:underline">
+                <Link href="/organization" className="text-blue-500 bg-white p-8 rounded-md shadow-md">
                     <div className="flex flex-col items-center">
                         <FaUniversity size={40} />
                         <p>Organization</p>
@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
                 </Link>
 
                 {/* Teacher Option */}
-                <Link href="/teacher" className="text-green-500 hover:underline">
+                <Link href="/teacher" className="text-green-500  bg-white p-8 rounded-md shadow-md">
                     <div className="flex flex-col items-center">
                         <FaChalkboardTeacher size={40} />
                         <p>Teacher</p>
@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
                 </Link>
 
                 {/* Student Option */}
-                <Link href="/student" className="text-purple-500 hover:underline">
+                <Link href="/student" className="text-purple-500  bg-white p-8 rounded-md shadow-md">
                     <div className="flex flex-col items-center">
                         <FaUserGraduate size={40} />
                         <p>Student</p>

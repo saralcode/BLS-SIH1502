@@ -78,8 +78,8 @@ const OrganizationPage: React.FC = () => {
                     </Link>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-                    {teachers.map((teacher) => {
-                        return <TeacherCard teacher={teacher} />
+                    {teachers.map((teacher, index) => {
+                        return <TeacherCard teacher={teacher} key={"teachers"+index} />
                     })}
                 </div>
             </section>

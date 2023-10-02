@@ -17,9 +17,9 @@ type NavItem = {
 }
 const navItems: NavItem[] = [
   { title: "Home", url: "/", equal: true },
-  { title: "Courses", url: "/courses" },
-  { title: "Study Materials", url: "/study-materials" },
-  { title: "Services", url: "/services" }
+  { title: "Page 1", url: "/courses" },
+  { title: "Page 2", url: "/study-materials" },
+  { title: "Page 3", url: "/services" }
 
 ]
 export default function NavbarDefault() {

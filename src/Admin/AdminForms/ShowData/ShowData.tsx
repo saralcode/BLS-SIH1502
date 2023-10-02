@@ -49,7 +49,7 @@ export function ShowData({ props, data }: { props: PageFormData, data: any[] }) 
   }
   return (
     <div className="px-4 not-prose  ">
-      <ShowDeleteDialog isOpen={isOpen.isOpen} closeModal={closeModal}  />
+      <ShowDeleteDialog isOpen={isOpen.isOpen} closeModal={closeModal} />
       <div className="flex justify-between">
         <Title isH1>{props.title}</Title>
         <Link href={`${props.currentURL}?_id=add`} >
@@ -59,8 +59,8 @@ export function ShowData({ props, data }: { props: PageFormData, data: any[] }) 
       <p className="px-2 my-4">{props.description}</p>
       <SearchPage />
       <section >
-        {loading ? <LoadingSkeleton tileData={props.tileData} /> : results &&
-          <ShowDataTable setIsOpen={setIsOpen} results={results} tileData={props.tileData} currentUrl={props.currentURL} />
+        {loading ? <LoadingSkeleton tileData={props.tileData ?? { title: "", description: { key: "" } }} /> : results &&
+          <ShowDataTable setIsOpen={setIsOpen} results={results} tileData={props.tileData ?? { title: "", description: { key: "" } }} currentUrl={props.currentURL} />
         }
       </section>
     </div>

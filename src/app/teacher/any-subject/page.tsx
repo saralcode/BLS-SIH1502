@@ -1,10 +1,9 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Title from '@/components/Title/Title';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@material-tailwind/react';
+import { Button, Card } from '@material-tailwind/react';
 interface StudentCardProps {
 
     id: number;
@@ -68,9 +67,14 @@ const SubjectPage: React.FC = () => {
         <div className='container mx-auto'>
             <Title>Data Structure and Algoirthm</Title>
             <p className='px-4'>Enim commodo aliqua aute esse enim. Adipisicing fugiat laboris consequat velit ex et officia fugiat magna nisi. Lorem cillum eiusmod cupidatat sunt minim irure commodo ex eu irure. Ipsum eu non sit eu culpa culpa minim officia nulla eu irure. Cupidatat minim laboris minim velit qui labore. Labore esse nulla laborum in quis quis exercitation in ea ipsum cillum amet. Quis duis occaecat sunt id ex reprehenderit sint.</p>
+            <Link href="/teacher/any-subject/study-materials" className='no-underline'>
+                <div className='flex justify-center items-center bg-blue-600 h-20 rounded-md text-white text-2xl text-center hover:bg-indigo-600 transition-colors cursor-pointer'>
+                    Study Materials
+                </div>
+            </Link>
             <Title>Joined Students</Title>
             <div className='flex justify-end'>
-                <Link href="/organization/add-course">
+                <Link href="/teacher/any-subject/pending-students">
                     <Button>Pending Students</Button>
                 </Link>
             </div>
