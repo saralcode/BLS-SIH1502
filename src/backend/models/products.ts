@@ -87,8 +87,9 @@ const productSchema = new mongoose.Schema<Product>({
     },
     createdAt: {
         type: Date,
-        default: now()
+        default: mongoose.now()
     },
+
     image0: {
         type: FileSchema,
         required: true,

@@ -19,7 +19,6 @@ export const FileSchema = new mongoose.Schema<FileType>({
         type: String,
         required: true,
     },
-
     name: {
         type: String,
         required: true
