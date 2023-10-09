@@ -17,9 +17,9 @@ type NavItem = {
 }
 const navItems: NavItem[] = [
   { title: "Home", url: "/", equal: true },
-  { title: "Page 1", url: "/courses" },
-  { title: "Page 2", url: "/study-materials" },
-  { title: "Page 3", url: "/services" }
+  { title: "Features", url: "/features" },
+  { title: "About Us", url: "/about-us" },
+
 
 ]
 export default function NavbarDefault() {
@@ -48,7 +48,7 @@ export default function NavbarDefault() {
         <div className="hidden lg:block"><NavList setNavOpen={setOpenNav} /></div>
         <div className="hidden lg:inline-block">
 
-          {/* <NavRightItems /> */}
+          <NavRightItems />
         </div>
 
         <IconButton
@@ -115,10 +115,11 @@ function NavList({setNavOpen}:{setNavOpen:React.Dispatch<React.SetStateAction<bo
 
 function NavRightItems() {
   return <div className="my-6 lg:my-0 ">
-    <a href="tel:+918252940937">
+    <Link href="/contact-us">
     <Button variant="filled" color="red" size="sm" fullWidth className="mb-2">
-      <span>Call Now</span>
+      <span>Contact Us</span>
     </Button>
-    </a>
+    </Link>
+
   </div>
 }

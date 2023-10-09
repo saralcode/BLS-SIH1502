@@ -6,7 +6,7 @@ import Link from "next/link";
 const footerData = [
   { text: "About Us", href: "/about-us" },
   { text: "Contact Us", href: "/contact-us" },
-  { text: "Privacy Policy", href: "/privacy-policy" }
+
 ]
 
 export function MaterialFooters() {
@@ -52,7 +52,10 @@ export function MaterialFooters() {
       </div>
       <hr className="my-8 border-blue-gray-50" />
       <Typography color="white" className="text-center  font-semibold">
-        A prototype of Blended Learning System
+        A Prototype of Blended Learning System
+      </Typography>
+      <Typography color="white" className="text-center font-semibold">
+        By team : 8 Bit Guys
       </Typography>
     </section>
   );
