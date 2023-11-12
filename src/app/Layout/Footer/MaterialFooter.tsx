@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const footerData = [
   { text: "About Us", href: "/about-us" },
-  { text: "Contact Us", href: "/contact-us" },
+  // { text: "Contact Us", href: "/contact-us" },
 
 ]
 

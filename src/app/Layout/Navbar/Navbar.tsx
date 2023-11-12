@@ -13,12 +13,13 @@ import Link from "next/link";
 type NavItem = {
   title: string,
   url: string,
+  newTab?:boolean,
   equal?: boolean
 }
 const navItems: NavItem[] = [
   { title: "Home", url: "/", equal: true },
-  { title: "Features", url: "/features" },
-  { title: "About Us", url: "/about-us" },
+  { title: "Try Web Version", url: "/web-version" },
+  { title: "Mobile App Prototype", newTab:true, url: "https://www.youtube.com/watch?v=km1kNJwGvps" },
 
 
 ]
@@ -35,15 +36,15 @@ export default function NavbarDefault() {
 
 
   return (
-    <Navbar color="indigo" fullWidth className="mx-auto z-60 sticky top-0 py-2 px-4 lg:px-8">
+    <Navbar color="white" fullWidth className="mx-auto z-60 sticky top-0 py-4 px-4 lg:px-8">
       <div className="container  top-0 mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
-          className="mr-4 text-xl flex text-white cursor-pointer py-1.5 font-medium items-center gap-4"
+          className="mr-4 text-xl flex cursor-pointer py-1.5 font-medium items-center gap-4"
         >
-{/* <Image height={60} width={120} className="my-0 rounded-md object-contain" alt="BLS Logo" src="/logo/logo.png" /> */}
-          Blended Learning System
+          {/* <Image height={60} width={120} className="my-0 rounded-md object-contain" alt="BLS Logo" src="/logo/logo.png" /> */}
+          Hybrid Learning System
         </Typography>
         <div className="hidden lg:block"><NavList setNavOpen={setOpenNav} /></div>
         <div className="hidden lg:inline-block">
@@ -53,7 +54,7 @@ export default function NavbarDefault() {
 
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-8 w-8 p-2 rounded active:bg-blue-800 transition-all bg-blue-500 hover:bg-pink-600 lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -89,8 +90,8 @@ export default function NavbarDefault() {
           )}
         </IconButton>
       </div>
-      <Collapse open={openNav} className="text-white stroke-white">
-        <div className="container mx-auto">
+      <Collapse open={openNav} className="">
+        <div className="container mx-auto py-4">
           <NavList setNavOpen={setOpenNav} />
           <NavRightItems />
         </div>
@@ -99,15 +100,15 @@ export default function NavbarDefault() {
   );
 }
 
-function NavList({setNavOpen}:{setNavOpen:React.Dispatch<React.SetStateAction<boolean>>}) {
+function NavList({ setNavOpen }: { setNavOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
   const pathname = usePathname();
   return <ul className="flex flex-col lg:flex-row gap-4 items-center ">
 
     {navItems.map((value: NavItem, index: number) => {
       const isEqual = !value.equal ? pathname.startsWith(value.url) ? true : false : pathname == value.url ? true : false;
-      return <Link onClick={()=>{
+      return <Link target={value.newTab?"_blank":"_self"} onClick={() => {
         setNavOpen(false);
-      }} href={value.url} key={"NavUrls" + index}> <Button size="sm" variant={isEqual ? "filled" : "outlined"} color={isEqual ? "orange" : "white"}>{value.title}</Button></Link>
+      }} href={value.url} key={"NavUrls" + index}> <Button size="sm" variant={isEqual ? "filled" : "outlined"} color={isEqual ? "orange" : "pink"}>{value.title}</Button></Link>
     })}
   </ul>
 }
@@ -115,10 +116,10 @@ function NavList({setNavOpen}:{setNavOpen:React.Dispatch<React.SetStateAction<bo
 
 function NavRightItems() {
   return <div className="my-6 lg:my-0 ">
-    <Link href="/contact-us">
-    <Button variant="filled" color="red" size="sm" fullWidth className="mb-2">
-      <span>Contact Us</span>
-    </Button>
+    <Link href="/about-us">
+      <Button variant="filled" color="red" size="sm" fullWidth className="mb-2">
+        <span>About Us</span>
+      </Button>
     </Link>
 
   </div>
