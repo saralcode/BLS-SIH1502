@@ -8,12 +8,12 @@ import HomeFeatures from "./Features";
 import React, { ReactNode } from "react";
 
 function MyCustomHeading({children}:{children:ReactNode}){
-    return <h2 data-aos="fade-up" className="bg-gradient-to-r text-5xl font-extrabold p-2 font-serif text-transparent drop-shadow-md my-10 from-pink-500 via-red-500 to-yellow-500 bg-clip-text">{children}</h2>
+    return <h2 data-aos="fade-up" className="bg-gradient-to-r text-3xl md:text-5xl font-extrabold p-2 font-serif text-transparent drop-shadow-md my-10 from-pink-500 via-red-500 to-yellow-500 bg-clip-text">{children}</h2>
 }
 
 export default function LandingPage() {
     return <section className=" w-full text-center mb-0">
-        <section data-aos="fade-up" className="bg-gradient-to-br from-blue-500 to-pink-600 w-full py-8">
+        <section data-aos="fade-up" className="bg-gradient-to-br from-blue-500 to-pink-600 w-full p-4 md:p-8">
 
             <Hero />
         </section>

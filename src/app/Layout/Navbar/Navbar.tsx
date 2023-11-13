@@ -54,7 +54,7 @@ export default function NavbarDefault() {
 
         <IconButton
           variant="text"
-          className="ml-auto h-8 w-8 p-2 rounded active:bg-blue-800 transition-all bg-blue-500 hover:bg-pink-600 lg:hidden"
+          className="ml-auto h-8 w-8 p-2 rounded active:bg-pink-800 transition-all bg-pink-500 hover:bg-pink-600 lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >

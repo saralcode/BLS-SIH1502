@@ -3,7 +3,7 @@ const articles = [
     author: 'By Claire Robinson',
     title: 'Receive money in any currency with no fees',
     description:
-      'The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …',
+      'The world is getting smaller and we\'re becoming more mobile. So why should you be forced to only receive money in a single …',
     imgPath: '/images/image-currency.jpg',
     imgAlt: 'multiple bills with different values and currencies',
   },
@@ -19,7 +19,7 @@ const articles = [
     author: 'By Wilson Hutton',
     title: 'Take your Easybank card wherever you go',
     description:
-      'We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …',
+      'We want you to enjoy your travels. This is why we don\'t charge any fees on purchases while you\'re abroad. We\'ll even show you …',
     imgPath: '/images/image-plane.jpg',
     imgAlt: 'A plane in the sky',
   },
@@ -27,7 +27,7 @@ const articles = [
     author: 'By Claire Robinson',
     title: 'Our invite-only Beta accounts are now live!',
     description:
-      'After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...',
+      'After a lot of hard work by the whole team, we\'re excited to launch our closed beta. It\'s easy to request an invite through the site ...',
     imgPath: '/images/image-confetti.jpg',
     imgAlt: 'Falling confetti',
   },

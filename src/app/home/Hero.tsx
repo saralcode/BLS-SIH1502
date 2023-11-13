@@ -41,7 +41,7 @@ export default function Hero() {
             <ul className="text-left not-prose marker:text-blue-500 ">
 
                 {listData.map((value, index) => {
-                    return <li data-aos="fade-up" data-aos-delay={"400"} key={"listItemsdata"+index} className="rounded px-4 py-2.5 my-4 leading-none bg-white text-lg"><ShowMarkdown data={value.text} /></li>
+                    return <li data-aos="fade-up" data-aos-delay={"400"} key={"listItemsdata"+index} className="rounded px-4 py-2.5 my-4 leading-none bg-white text-base md:text-lg"><ShowMarkdown data={value.text} /></li>
                 })}
             </ul>
 
